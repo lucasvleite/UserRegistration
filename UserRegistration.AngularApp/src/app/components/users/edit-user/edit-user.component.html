@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit User</h1>
+
+  <form #form="ngForm" (ngSubmit)="updateUser()">
+    <div class="row">
+      <div class="col-8">
+        <div class="mb-3">
+          <label for="id" class="form-label">Id</label>
+          <input type="text" class="form-control bg-light" id="id" readonly
+          name="id" [(ngModel)]="userDetails.id">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="userDetails.name">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="login" class="form-label">Login</label>
+          <input type="text" class="form-control" id="login" name="login" [(ngModel)]="userDetails.login">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-danger"
+        (click)="deleteUser(userDetails.id)">Delete</button>
+      </div>
+    </div>
+
+  </form>
+</div>
